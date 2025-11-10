@@ -44,4 +44,4 @@
 build/
 .DS_Store
 logs/
-docs/
+venv/
