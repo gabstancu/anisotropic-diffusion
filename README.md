@@ -9,6 +9,7 @@ We consider the steady anisotropic diffusion equation on the unit square $(0,1)^
 ```
 
 with Dirichlet boundary conditions:
+
 ```math
 \begin{cases}
 u(0,y) = u(1,y) = 4, \\[4pt]
@@ -19,9 +20,10 @@ u(x,1) = \alpha\,\sin(\pi x),
 ```
 
 The source term is defined as
-$$
+
+```math
 f(x,y) = b_0 \sin(\pi x)\sin(\pi y), \qquad b_0 = 1.2.
-$$
+```
 
 The anisotropy parameter, $\varepsilon$, controls the relative strength of diffusion in the $y$-direction compared to $x$. The values of $\varepsilon$ range from $1$ (isotropic case) down to $10^{-6}$ (highly anisotropic).
 
@@ -75,10 +77,24 @@ The resulting linear system $A \cdot u = b$ is symmetric and positive definite (
 ## Solvers implemented
 
 <div align="center">
-| Method | Description |
-|:--:|:--:|
-| **CG** | Standard Conjugate Gradient for SPD systems |
-| **PCG (IC(0))** | Preconditioned CG with Incomplete Cholesky (IC(0)) factorization |
+  <table>
+    <thead>
+      <tr>
+        <th align="center">Method</th>
+        <th align="center">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center"><b>CG</b></td>
+        <td align="center">Standard Conjugate Gradient for SPD systems</td>
+      </tr>
+      <tr>
+        <td align="center"><b>PCG (IC(0))</b></td>
+        <td align="center">Preconditioned CG with Incomplete Cholesky (IC(0)) factorization</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## Experiment setup
