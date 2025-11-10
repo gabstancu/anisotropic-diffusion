@@ -1,4 +1,4 @@
-# Antisotropic Diffusion in 2D
+# Anisotropic Diffusion in 2D
 
 ## Problem description
 
@@ -22,7 +22,7 @@ u(x,1) = \alpha\,\sin(\pi x),
 The source term is defined as
 
 ```math
-f(x,y) = b_0 \sin(\pi x)\sin(\pi y), \qquad b_0 = 1.2.
+f(x,y) = b_0 \; \sin(\pi x)\sin(\pi y), \qquad b_0 = 1.2.
 ```
 
 The anisotropy parameter, $\varepsilon$, controls the relative strength of diffusion in the $y$-direction compared to $x$. The values of $\varepsilon$ range from $1$ (isotropic case) down to $10^{-6}$ (highly anisotropic).

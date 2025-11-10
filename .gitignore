@@ -45,4 +45,3 @@ build/
 .DS_Store
 logs/
 venv/
-*.dat
