@@ -2,10 +2,12 @@
 
 ## Problem description
 
-We consider the steady anisotropic diffusion equation on the unit square \((0,1)^2\):
-$$
--\,u_{xx} - \varepsilon\,u_{yy} = f(x,y),
-$$
+We consider the steady anisotropic diffusion equation on the unit square $(0,1)^2$:
+
+```math
+    -u_{xx} - \varepsilon\,u_{yy} = f(x,y),
+```
+
 with Dirichlet boundary conditions:
 $$
 \begin{cases}
@@ -56,7 +58,7 @@ The PDE is discretized using a **five-point finite difference stencil** on a uni
 $$
 \begin{aligned}
 &\frac{-u_{i-1,j} + 2u_{i,j} - u_{i+1,j}}{h^2}
-\;+\;
++
 \varepsilon\,
 \frac{-u_{i,j-1} + 2u_{i,j} - u_{i,j+1}}{h^2}
 = f_{i,j}.
@@ -70,7 +72,6 @@ The resulting linear system $A \cdot u = b$ is symmetric and positive definite (
 ## Solvers implemented
 
 <div align="center">
-
 | Method | Description |
 |:--:|:--:|
 | **CG** | Standard Conjugate Gradient for SPD systems |
