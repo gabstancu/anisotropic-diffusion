@@ -30,7 +30,7 @@ The anisotropy parameter, $\varepsilon$, controls the relative strength of diffu
 No closed-form elementary solution exists for this mixed Dirichlet problem.  
 However, the analytical solution can be expressed as a **Fourier–hyperbolic series**:
 
-$$
+\[
 \begin{aligned}
 u(x,y) = 4 &+ \frac{b_0}{\pi^2(1+\varepsilon)}\,\sin(\pi x)\sin(\pi y) \\
 &+ \sum_{n=1}^{\infty}
@@ -39,7 +39,7 @@ u(x,y) = 4 &+ \frac{b_0}{\pi^2(1+\varepsilon)}\,\sin(\pi x)\sin(\pi y) \\
      + a_n^{(1)}\,\sinh\!\big(\tfrac{n\pi}{\sqrt{\varepsilon}}y\big)}
      {\sinh\!\big(\tfrac{n\pi}{\sqrt{\varepsilon}}\big)},
 \end{aligned}
-$$
+\]
 where the boundary coefficients are
 $$
 a_n^{(0)} = 2\!\int_0^1 \!\!\big(\sin(\pi x)-4\big)\sin(n\pi x)\,dx, \qquad
