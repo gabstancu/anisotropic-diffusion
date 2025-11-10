@@ -58,7 +58,7 @@ This representation is used as a **validation reference** through numerical conv
 
 ## Discretisation
 
-The PDE is discretized using a **five-point finite difference stencil** on a uniform grid of size  $N\times N$ with spacing $h = 1/(N+1)$:
+The PDE is discretised using a **five-point finite difference stencil** on a uniform grid of size  $N\times N$ with spacing $h = 1/(N+1)$:
 
 ```math
 \begin{aligned}
@@ -102,14 +102,14 @@ The resulting linear system $A \cdot u = b$ is symmetric and positive definite (
 Each solver was tested for interior grid sizes
 
 ```math
-N \in \{64,\,128,\,256,\,512\},
+N \in \{64,\,128,\,256,\,512\}.
 ```
 
-and anisotropy levels
+<!-- and anisotropy levels
 
 ```math
 \varepsilon \in \{1, 7\times10^{-1}, 5\times10^{-1}, 3\times10^{-1}, 10^{-1}, 7\times10^{-2}, 5\times10^{-2}, 3\times10^{-2}, 10^{-2}, \dots, 10^{-6}\}.
-```
+``` -->
 
 For each configuration, we log:
 
