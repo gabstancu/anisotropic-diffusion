@@ -77,7 +77,7 @@ The resulting linear system $A \cdot u = b$ is symmetric and positive definite (
 ## Solvers implemented
 
 <div align="center">
-  <table>
+ <table>
     <thead>
       <tr>
         <th align="center">Method</th>
