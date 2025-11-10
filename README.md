@@ -9,14 +9,14 @@ We consider the steady anisotropic diffusion equation on the unit square $(0,1)^
 ```
 
 with Dirichlet boundary conditions:
-$$
+```math
 \begin{cases}
 u(0,y) = u(1,y) = 4, \\[4pt]
 u(x,0) = \sin(\pi x), \\[4pt]
 u(x,1) = \alpha\,\sin(\pi x),
 \end{cases}
 \qquad \text{with } \alpha = 0.8.
-$$
+```
 
 The source term is defined as
 $$
@@ -32,7 +32,7 @@ The anisotropy parameter, $\varepsilon$, controls the relative strength of diffu
 No closed-form elementary solution exists for this mixed Dirichlet problem.  
 However, the analytical solution can be expressed as a **Fourier–hyperbolic series**:
 
-\[
+```math
 \begin{aligned}
 u(x,y) = 4 &+ \frac{b_0}{\pi^2(1+\varepsilon)}\,\sin(\pi x)\sin(\pi y) \\
 &+ \sum_{n=1}^{\infty}
@@ -41,12 +41,15 @@ u(x,y) = 4 &+ \frac{b_0}{\pi^2(1+\varepsilon)}\,\sin(\pi x)\sin(\pi y) \\
      + a_n^{(1)}\,\sinh\!\big(\tfrac{n\pi}{\sqrt{\varepsilon}}y\big)}
      {\sinh\!\big(\tfrac{n\pi}{\sqrt{\varepsilon}}\big)},
 \end{aligned}
-\]
+```
+
 where the boundary coefficients are
-$$
+
+```math
 a_n^{(0)} = 2\!\int_0^1 \!\!\big(\sin(\pi x)-4\big)\sin(n\pi x)\,dx, \qquad
 a_n^{(1)} = 2\!\int_0^1 \!\!\big(\alpha\sin(\pi x)-4\big)\sin(n\pi x)\,dx.
-$$
+```
+
 This representation is used as a **validation reference** through numerical convergence rather than symbolic evaluation.
 
 ---
@@ -55,7 +58,7 @@ This representation is used as a **validation reference** through numerical conv
 
 The PDE is discretized using a **five-point finite difference stencil** on a uniform grid of size  $N\times N$ with spacing $h = 1/(N+1)$:
 
-$$
+```math
 \begin{aligned}
 &\frac{-u_{i-1,j} + 2u_{i,j} - u_{i+1,j}}{h^2}
 +
@@ -63,7 +66,7 @@ $$
 \frac{-u_{i,j-1} + 2u_{i,j} - u_{i,j+1}}{h^2}
 = f_{i,j}.
 \end{aligned}
-$$
+```
 
 The resulting linear system $A \cdot u = b$ is symmetric and positive definite (SPD). The coefficient matrix $A$ exhibits strong ill-conditioning for small $\varepsilon$.
 
@@ -76,19 +79,21 @@ The resulting linear system $A \cdot u = b$ is symmetric and positive definite (
 |:--:|:--:|
 | **CG** | Standard Conjugate Gradient for SPD systems |
 | **PCG (IC(0))** | Preconditioned CG with Incomplete Cholesky (IC(0)) factorization |
-
 </div>
 
 ## Experiment setup
 
 Each solver was tested for interior grid sizes
-$$
+
+```math
 N \in \{64,\,128,\,256,\,512\},
-$$
+```
+
 and anisotropy levels
-$$
+
+```math
 \varepsilon \in \{1, 7\times10^{-1}, 5\times10^{-1}, 3\times10^{-1}, 10^{-1}, 7\times10^{-2}, 5\times10^{-2}, 3\times10^{-2}, 10^{-2}, \dots, 10^{-6}\}.
-$$
+```
 
 For each configuration, we log:
 
