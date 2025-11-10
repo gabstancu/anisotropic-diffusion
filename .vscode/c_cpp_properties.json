@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:HOMEBREW_OPT_PATH}/ginac/include",
+                "${env:HOMEBREW_OPT_PATH}/cln/include", 
+                "${env:EXTERNAL_LIBS_PATH}/gnuplot/include",
+                "${env:EXTERNAL_LIBS_PATH}/matplotlib-cpp",
+                "${env:HOMEBREW_OPT_PATH}/boost/include"
+            ],
+            "defines": [],
+            "compilerPath": "${env:HOMEBREW_OPT_PATH}/llvm/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
