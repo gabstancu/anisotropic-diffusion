@@ -2,7 +2,7 @@
 
 ## Problem description
 
-We consider the steady anisotropic diffusion equation on the unit square $(0,1)^2$:
+We consider the steady-state anisotropic diffusion equation on the unit square $(0,1)^2$:
 
 ```math
     -u_{xx} - \varepsilon\,u_{yy} = f(x,y),
